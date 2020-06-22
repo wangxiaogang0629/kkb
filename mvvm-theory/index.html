@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/babel-core/6.1.19/browser.min.js"></script>
+  <script src="./myvue.js"></script>
+</head>
+<body>
+    <div class="box">
+      {{name}}
+      <div>{{age}}</div>
+      <div>{{msg}}</div>
+      <input type="text" v-module='msg'>
+    </div>
+
+    <script>
+      new Vue({
+        el: '.box',
+        data: {
+          name: 'xiaogang',
+          age: 20,
+          msg: 'hello'
+        }
+      })
+    </script>
+</body>
+</html>
