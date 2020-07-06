@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p @click="onclick">{{counter}}</p>
+    <!-- <p k-text="counter"></p> -->
+    <!-- <p k-html="desc"></p> -->
+  </div>
+
+  <!-- <script crossorigin="anonymous" integrity="sha384-g92AC94PwdsWZaIpD8bGSldDkIAgSf0X7tZ5Isd6rNXbjILE0EU6vrlj+gWPDMyY" src="https://lib.baomitu.com/vue/2.6.11/vue.common.dev.js"></script> -->
+
+  <script src="myvue.js"></script>
+
+  <script>
+    const app = new MyVue({
+      el:'#app',
+      data: {
+        counter: 1,
+        // desc: 'kvue<span style="color:red">真棒</span>'
+      },
+      methods: {
+        onclick(e) {
+
+          console.log('this', e);
+          // this必须是组件实例
+          console.log(this);
+        }
+      },
+    })
+    setInterval(() => {
+      console.log(app)
+      app.counter++
+    }, 1000);
+    
+  </script>
+</body>
+</html>

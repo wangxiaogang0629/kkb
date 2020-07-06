@@ -61,9 +61,9 @@ class Vue extends EventTarget{
         console.log('元素节点')
 
         let attrs = element.attributes
-        if (attrs.hasOwnProperty('v-module')) {
+        if (attrs.hasOwnProperty('v-model')) {
           
-          let keyName = attrs['v-module'].value
+          let keyName = attrs['v-model'].value
           element.value = this.data[keyName]
 
           element.addEventListener('input', e => {
